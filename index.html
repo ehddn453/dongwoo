@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script defer src="js/index.js"></script>
+</head>
+<body>
+    <header>
+        <!-- 버거메뉴 클릭시 header에 class active 들어가야됨 -->
+        <article class="head">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./img/logo_white.png">
+                </a>
+            </h1>
+            <div class="right_menu">
+                <nav class="lang">
+                    <a>En</a>
+                    <a>Cn</a>
+                    <a>Partner Center</a>
+                </nav>
+                <!-- 버거메뉴 -->
+                <nav class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+            </div>
+        </article>
+        <!-- 나타나야되는 메뉴 -->
+        <div class="burger_menu">
+            <article class="burger_sub">
+                <a href="#">
+                    <h2>About Us</h2>
+                    <ul>
+                        <li>Corporate Message</li>
+                        <li>Sales office</li>
+                        <li>History</li>
+                        <li>Ethics</li>
+                    </ul>
+                </a>
+                <div class="menu_img">
+                    <img src="./img/main3/ms2_pt.png" alt="bg">
+                </div>
+            </article>
+        </div>
+    </header>
+
+    <main>
+        <div class="main1">
+            <div class="main1_text">
+                <h2>
+                    Our parts make<br>
+                    the world convenient
+                </h2>
+                <p>우리 부품으로 편리한 세상을 만든다.</p>
+            </div>
+            <div class="main1_popup">
+                <div class="popup_box">
+                    <span class="search_box"></span>
+                    <form class="popup1">
+                        <strong>Search by Part No.</strong>
+                        <div class="input_box">
+                            <input
+                                class="input_text"
+                                type="text"
+                                placeholder="Please enter a search term."
+                            />
+                            <input type="submit" class="input_submit" value="">
+                        </div>
+                    </form>
+                    <form class="popup1">
+                        <strong>Search by Characteristics</strong>
+                        <div class="input_box">
+                            <input
+                                class="input_text"
+                                type="text"
+                                placeholder="Please enter a search term."
+                            />
+                            <input type="submit" class="input_submit" value="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- main2 -->
+        <div class="main2">
+            <article class="prd">
+                <h2>Products</h2>
+                <div class="prd_box">
+                    <!-- active 들어가면 이미지 보여지게 -->
+                    <span class="active"><img src="./img/product/ms1_prd01.jpg" alt="product1"></span>
+                    <span><img src="./img/product/ms1_prd02.jpg" alt="product2"></span>
+                    <span><img src="./img/product/ms1_prd03.jpg" alt="product3"></span>
+                    <span><img src="./img/product/ms1_prd04.jpg" alt="product4"></span>
+                </div>
+                <div class="prd_popup">
+                    <ul class="prd_popup_all">
+                        <!-- li에 active 들어가면 p태그 보여지게 -->
+                        <li class="prd_popup_info active">
+                            <h3>Film Capacitors</h3>
+                            <p>전기자동차, 5G 기지국, Green Energy 등에 적용되는 다양한 종류의 필름 콘덴서를 제조 판매하고 있습니다.</p>
+                        </li>
+                        <li class="prd_popup_info">
+                            <h3>EMS / PCBA (OEM)</h3>
+                            <p>디스플레이 보드, 메인 컨트롤 보드, 파워 보드, 필터 보드, 인버터 보드, 컨버터 보드 등 모든 PCBA를 포함하여 대응 가능합니다.</p>
+                        </li>
+                        <li class="prd_popup_info">
+                            <h3>Power Supply (ODM)</h3>
+                            <p>프린터용, LED 조명용, PC용, SET-TOP BOX용 PSU 등을 중국위해법인을 통해 제조 판매하고 있습니다.</p>
+                        </li>
+                        <li class="prd_popup_info">
+                            <h3>LED Lighting (선텍)</h3>
+                            <p>컨버터 개발 및 제조기술을 바탕으로 아파트, 지식산업센터, 빌딩, 공장 등 다양한 환경과 공간에 편안하고 안정적인 LED의 빛을 비추는 조명을 제조 판매하고 있습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prd_bottom">
+                    <a>Application Guide</a>
+                    <a>Products Catalog</a>
+                </div>
+            </article>
+        </div>
+        <!-- main3 -->
+        <div class="main3">
+            <h2>ABOUT US</h2>
+            <div class="main3_flex">
+                <div class="main3_left">
+                    <span>
+                        <img src="../img/main3/ms2_pt.png">
+                    </span>
+                    <div class="main3_text">
+                        <p>
+                            성호전자는 1973년 5월 설립되어 2001년 코스닥시장에 등록된 기업으로, 전원공급장치(PSU)와 전기/전자 완제품 수동 회로구성의 핵심부품인 FILM CAPACITOR 제조 및 판매를 주요 사업으로 하고 있습니다.<br>
+                            지식경제부 World Class 300, 경영혁신형 중소기업(MAIN-BIZ), 기술혁신형 중소기업(INNO-BIZ) 등으로 선정되며 늘 성장하는 회사가 되기 위해 노력하고 있습니다.
+                        </p>
+                        <a>
+                            <span class="arr">
+                                <img src="./img/icon/right_arr.png" alt="arr">
+                            </span>
+                            <em class="circle"></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="main3_right">
+                    <img src="./img/main3/ms2_img.png" alt="map">
+                </div>
+            </div>
+        </div>
+        <!-- main4 -->
+        <div class="main4">
+            <article class="sup">
+                <h2>Support</h2>
+                <ul class="sup_flex">
+                    <li>
+                        <span><img src="./img/main4/ms3_img01.jpg" alt="supImg1"></span>
+                        <p>Product Catalog</p>
+                    </li>
+                    <li>
+                        <span><img src="./img/main4/ms3_img02.jpg" alt="supImg2"></span>
+                        <p>Certificates</p>
+                    </li>
+                    <li>
+                        <span><img src="./img/main4/ms3_img03.jpg" alt="supImg3"></span>
+                        <p>Partner Center</p>
+                    </li>
+                </ul>
+            </article>
+        </div>
+        <!-- main5 -->
+        <div class="main5">
+            <article class="con">
+                <h2>Contact Us</h2>
+                <form>
+                    <div class="con1">
+                        <div>
+                            <label>성함</label>
+                            <input
+                                type="text"
+                                name="name"
+                            />
+                        </div>
+                        <div>
+                            <label>연락처</label>
+                            <input
+                                type="text"
+                                name="call"
+                            />
+                        </div>
+                        <div>
+                            <label>이메일</label>
+                            <input
+                                type="email"
+                                name="email"
+                            />
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <textarea
+                            placeholder="내용"
+                            name="text"
+                        ></textarea>
+                    </div>
+                    <div class="con3">
+                        <label>
+                            ※개인정보처리방침에 동의합니다.
+                            <input
+                                type="checkbox"
+                                name="chk"
+                                class="chk"
+                            />
+                        </label>
+                    </div>
+                    <div class="con4">
+                        <a>문의하기</a>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="foot1">
+            <div class="foot_form">
+                <form>
+                    <strong>Search by Part No.</strong>
+                    <input
+                        type="text"
+                        placeholder="Please enter a search term."
+                        class="footer_text"
+                    />
+                    <input type="submit" class="footer_submit submit1" value>
+                </form>
+                <form>
+                    <strong>Search by Characteristics</strong>
+                    <input
+                        type="text"
+                        placeholder="Please enter a search term."
+                        class="footer_text"
+                    />
+                    <input type="submit" class="footer_submit submit2" value>
+                </form>
+            </div>
+        </div>
+        <div class="foot2">
+            <article class="foot2_left">
+                <h2>개인정보 처리방침</h2>
+                <p>주소: 서울 금천구 가산디지털1로 205-17 Tel: 02-2104-7500 fax: 02-6713-7748</p>
+            </article>
+            <div class="foot2_right">
+                Copyright © Sungho Electronics
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
