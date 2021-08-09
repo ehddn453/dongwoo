@@ -12,14 +12,31 @@ for(let i=0; i<elMain2Li.length; i++){
         w = i;
     });
 };
-
-//burger 메뉴 클릭
-const elBurger = document.querySelector('.right_menu .burger'),
-      elHeader = document.querySelector('header'),
-      elBurgerMenu = document.querySelector('.burger_menu');
-
-elBurger.addEventListener('click',function(){
-    elBurger.classList.toggle('active');
-    elHeader.classList.toggle('active');
-    elBurgerMenu.classList.toggle('active');
+//main2 prdbox 전체 스크롤 시 나타나고 없어짐
+const elPrdBox = document.querySelector('.prd_box'),
+      elPrdPopup = document.querySelector('.prd_popup')
+window.addEventListener('scroll',function(){
+    if(window.innerHeight<=window.scrollY + 500){
+        elPrdBox.classList.add('move');
+        setTimeout(function(){
+            elPrdPopup.classList.add('move');
+        },500);
+    }else{
+        elPrdBox.classList.remove('move');
+        setTimeout(function(){
+            elPrdPopup.classList.remove('move');
+        },500);
+    }
 });
+
+const elMain1Popup = document.querySelector('.main1_popup'),
+      elMain1H2 = document.querySelector('.main1_text h2'),
+      elMain1P = document.querySelector('.main1_text p');
+setTimeout(function(){
+    elMain1Popup.classList.add('show');
+},1500);
+setTimeout(function(){
+    elMain1H2.classList.add('show');
+    elMain1P.classList.add('show');
+},1000);
+
