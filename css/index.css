@@ -737,6 +737,7 @@ footer .foot2 .foot2_right {
 .main3 {
   width: 100%;
   margin-bottom: 10%;
+  overflow: hidden;
 }
 
 .main3 h2 {
@@ -744,8 +745,6 @@ footer .foot2 .foot2_right {
   font-size: 13rem;
   color: #e5e5e5;
   padding-left: 1%;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
   z-index: 1;
 }
 

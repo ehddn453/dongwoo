@@ -199,12 +199,13 @@
 .main3{
     width: 100%;
     margin-bottom: 10%;
+    overflow: hidden;
     h2{
         position: relative;
         font-size: 13rem;
         color: #e5e5e5;
         padding-left: 1%;
-        transform: translateY(50%);
+        // transform: translate(0,50%);
         z-index: 1;
     }
     .main3_flex{
