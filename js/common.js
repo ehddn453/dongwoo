@@ -12,9 +12,6 @@ elBurger.addEventListener('click',function(){
 
 //스크롤 내릴 시 메뉴 배경 변경(header에 class show추가)
 window.addEventListener('scroll',function(){
-    console.log(
-        this.innerHeight<=window.scrollY
-        )
     if(this.innerHeight<=window.scrollY){
         elHeader.classList.add('scroll')
     }else{

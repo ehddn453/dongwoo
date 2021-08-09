@@ -29,14 +29,44 @@ window.addEventListener('scroll',function(){
     }
 });
 
+//main1 페이지 로드 시 나타나기
 const elMain1Popup = document.querySelector('.main1_popup'),
-      elMain1H2 = document.querySelector('.main1_text h2'),
+      elMain1H2 = document.querySelectorAll('.main1_text .h2 h2'),
       elMain1P = document.querySelector('.main1_text p');
+//오른쪽 위 빨간색 팝업창
 setTimeout(function(){
     elMain1Popup.classList.add('show');
 },1500);
+//text
 setTimeout(function(){
-    elMain1H2.classList.add('show');
+    for(let i=0; i<elMain1H2.length; i++){
+        elMain1H2[i].classList.add('show');
+    }
     elMain1P.classList.add('show');
 },1000);
+
+//main3 지도 나타나기
+const elMain3 = document.querySelector('.main3'),
+      elMain3Right = document.querySelector('.main3 .main3_right');
+window.addEventListener('scroll',function(){
+    let elMain3Height = elMain3.offsetTop - window.innerHeight;
+    if( elMain3Height <= window.scrollY - 600){
+        elMain3Right.classList.add('show')
+    }else{
+        elMain3Right.classList.remove('show')
+    }
+});
+
+//main4
+const elMain4 = document.querySelector('.main4'),
+      elMain4Ul = document.querySelector('.sup_flex');
+
+window.addEventListener('scroll',function(){
+    let elMain4Height = elMain4.offsetTop - window.innerHeight;
+        if(elMain4Height <= window.scrollY - 500){
+            elMain4Ul.classList.add('move');
+        }else{
+            elMain4Ul.classList.remove('move');
+        }
+});
 

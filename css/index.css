@@ -422,9 +422,14 @@ footer .foot2 .foot2_right {
   position: absolute;
   left: 10%;
   bottom: 15%;
+  overflow: hidden;
 }
 
-.main1 .main1_text h2 {
+.main1 .main1_text div {
+  overflow: hidden;
+}
+
+.main1 .main1_text div h2 {
   font-size: 4.5rem;
   font-weight: normal;
   -webkit-transform: translateY(100px);
@@ -434,7 +439,7 @@ footer .foot2 .foot2_right {
   opacity: 0;
 }
 
-.main1 .main1_text h2.show {
+.main1 .main1_text div h2.show {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
@@ -827,6 +832,17 @@ footer .foot2 .foot2_right {
 
 .main3 .main3_flex .main3_right {
   width: 50%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 2s;
+  transition: 2s;
+  opacity: 0;
+}
+
+.main3 .main3_flex .main3_right.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .main3 .main3_flex .main3_right img {
@@ -861,6 +877,9 @@ footer .foot2 .foot2_right {
   width: 100%;
   position: relative;
   overflow: hidden;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  opacity: 0;
 }
 
 .main4 .sup ul li span {
@@ -903,6 +922,22 @@ footer .foot2 .foot2_right {
   font-size: 1.7rem;
   font-weight: bold;
   z-index: 2;
+}
+
+.main4 .sup ul li:nth-of-type(1), .main4 .sup ul li:nth-of-type(3) {
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+}
+
+.main4 .sup ul li:nth-of-type(2) {
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+.main4 .sup ul.move li {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .main5 {
