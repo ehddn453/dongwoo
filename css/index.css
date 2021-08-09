@@ -150,7 +150,7 @@ header .head .right_menu .burger.active span:nth-of-type(3) {
 header .burger_menu {
   position: fixed;
   left: 0;
-  top: 13.5%;
+  top: 10%;
   width: 100%;
   height: 100vh;
   background-color: #101010;
