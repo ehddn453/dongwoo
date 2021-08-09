@@ -1,3 +1,13 @@
+$('.fade').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
+
 //main2 prd popup
 const elMain2Span = document.querySelectorAll('.prd_box span'),
       elMain2Li = document.querySelectorAll('.prd_popup_all .prd_popup_info');
