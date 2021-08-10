@@ -1,12 +1,3 @@
-$('.fade').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    autoplay: true,
-    autoplaySpeed: 3000
-  });
 
 //main2 prd popup
 const elMain2Span = document.querySelectorAll('.prd_box span'),
@@ -94,4 +85,25 @@ window.addEventListener('scroll',function(){
             elMain4Ul.classList.remove('move');
         }
 });
+
+//main1 background 변경
+const elBg1 = document.querySelector('.background .bg1'),
+      elBg2 = document.querySelector('.background .bg2'),
+      elBtn1 = document.querySelector('.back_button .btn1'),
+      elBtn2 = document.querySelector('.back_button .btn2');
+
+    window.onload = function onload(){
+        elBtn2.classList.remove('active');
+        elBg2.classList.remove('active');
+        elBtn1.classList.add('active');
+        elBg1.classList.add('active');
+        setTimeout(function(){
+            elBtn1.classList.remove('active');
+            elBg1.classList.remove('active');
+            elBtn2.classList.add('active');
+            elBg2.classList.add('active');
+        },5500);
+    };
+setInterval(onload,11000);
+
 

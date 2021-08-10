@@ -104,6 +104,10 @@ header{
                     padding: 2% 5%;
                     cursor: pointer;
                     margin-right: 1%;
+                    transition: .6s ease;
+                    &:hover{
+                        background-color: rgba(145, 145, 145, 0.5);
+                    }
                 }
             }
             .burger{
