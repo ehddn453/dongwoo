@@ -373,6 +373,42 @@
             img{width: 100%;}
         }
     }
+    .main3_video1{
+        border: 2px solid #000;
+        background-color: #000;
+        border-radius: 20px;
+        overflow: hidden;
+        width: 30%;
+        position: fixed;
+        right: 10%; top: 20%;
+        transform: translate(-150%,150%);
+        opacity: 0;
+        transition: 1s;
+        z-index: 5;
+        video{width: 100%;}
+    }
+    .main3_video2{
+        border: 2px solid #000;
+        background-color: #000;
+        border-radius: 20px;
+        overflow: hidden;
+        width: 30%;
+        position: fixed;
+        left: 10%; top: 20%;
+        transform: translate(150%,150%);
+        opacity: 0;
+        transition: 1s;
+        z-index: 5;
+        video{width: 100%;}
+    }
+    .main3_video1.active{
+        transform: translate(0);
+        opacity: 1;
+    }
+    .main3_video2.active{
+        transform: translate(0);
+        opacity: 1;
+    }
 }
 //main4
 .main4{

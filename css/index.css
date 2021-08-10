@@ -1079,6 +1079,60 @@ footer .foot2 .foot2_right {
   width: 100%;
 }
 
+.main3 .main3_video1 {
+  border: 2px solid #000;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 30%;
+  position: fixed;
+  right: 10%;
+  top: 20%;
+  -webkit-transform: translate(-150%, 150%);
+          transform: translate(-150%, 150%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 5;
+}
+
+.main3 .main3_video1 video {
+  width: 100%;
+}
+
+.main3 .main3_video2 {
+  border: 2px solid #000;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 30%;
+  position: fixed;
+  left: 10%;
+  top: 20%;
+  -webkit-transform: translate(150%, 150%);
+          transform: translate(150%, 150%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 5;
+}
+
+.main3 .main3_video2 video {
+  width: 100%;
+}
+
+.main3 .main3_video1.active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
+.main3 .main3_video2.active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
 .main4 .sup {
   margin: 4% 0 10%;
 }

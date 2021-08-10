@@ -105,5 +105,20 @@ const elBg1 = document.querySelector('.background .bg1'),
         },5500);
     };
 setInterval(onload,11000);
+//main2
+const elPrdBtn = document.querySelectorAll('.prd_bottom');
+for(let i=0; i<elPrdBtn.length; i++){
+    elPrdBtn[i].addEventListener('click',function(){
+        alert('The information does not exist.');
+    });
+};
 
+//main3
+const elMain3Arr = document.querySelector('.main3_text a'),
+      elMain3Vd1 = document.querySelector('.main3_video1'),
+      elMain3Vd2 = document.querySelector('.main3_video2');
 
+elMain3Arr.addEventListener('click',function(){
+    elMain3Vd1.classList.add('active');
+    elMain3Vd2.classList.add('active');
+});
