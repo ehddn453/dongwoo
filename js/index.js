@@ -113,12 +113,24 @@ for(let i=0; i<elPrdBtn.length; i++){
     });
 };
 
-//main3
+//main3 동영상 재생
 const elMain3Arr = document.querySelector('.main3_text a'),
       elMain3Vd1 = document.querySelector('.main3_video1'),
-      elMain3Vd2 = document.querySelector('.main3_video2');
+      elMain3Vd2 = document.querySelector('.main3_video2'),
+      elMain3VdBg = document.querySelector('.main3_video_bg');
 
 elMain3Arr.addEventListener('click',function(){
-    elMain3Vd1.classList.add('active');
-    elMain3Vd2.classList.add('active');
+    elMain3VdBg.classList.add('active');
+    setTimeout(function(){
+        elMain3Vd1.classList.add('active');
+        elMain3Vd2.classList.add('active');
+    },200)
 });
+elMain3VdBg.addEventListener('click',function(){
+    if(elMain3VdBg.classList.contains('active')){
+        elMain3VdBg.classList.remove('active');
+        elMain3Vd1.classList.remove('active');
+        elMain3Vd2.classList.remove('active');
+    };
+});
+
