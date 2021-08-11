@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>성호전자</title>
     <link href="css/index.css" rel="stylesheet">
-    <link href="css/slick.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script defer src="js/slick.min.js"></script>
     <script defer src="js/index.js"></script>
     <script defer src="js/common.js"></script>
 </head>
@@ -24,8 +21,8 @@
             </h1>
             <div class="right_menu">
                 <nav class="lang">
-                    <a>En</a>
-                    <a>Cn</a>
+                    <a href="./index_en.html">En</a>
+                    <a href="./index_ch.html">Cn</a>
                     <a>Partner Center</a>
                 </nav>
                 <!-- 버거메뉴 -->
@@ -39,7 +36,7 @@
         <!-- 나타나야되는 메뉴 -->
         <div class="burger_menu">
             <article class="burger_sub">
-                <a href="#">
+                <a href="sub.html">
                     <h2>About Us</h2>
                     <ul>
                         <li>Corporate Message</li>
@@ -57,14 +54,19 @@
 
     <main>
         <div class="main1">
-            <section class="fade slider" data-sizes="50vw">
-                <div>
+            <!-- 배경이미지 -->
+            <section class="background">
+                <div class="bg1 active">
                   <img src="./img/background/main_img1.jpg" alt="bg1">
                 </div>
-                <div>
+                <div class="bg2">
                   <img src="./img/background/main_img2.png" alt="bg2">
                 </div>
             </section>
+            <ul class="back_button">
+                <li class="btn2 "><em>02</em></li>
+                <li class="btn1 active"><em>01</em></li>
+            </ul>
             <div class="main1_text">
                 <div class="h2"><h2>Our parts make</h2></div>
                 <div class="h2"><h2>the world convenient</h2></div>
@@ -163,6 +165,17 @@
                 <div class="main3_right">
                     <img src="./img/main3/ms2_img.png" alt="map">
                 </div>
+            </div>
+            <!-- active들어가면 비디오 나타남 -->
+            <div class="main3_video1">
+                <video autoplay loop>
+                    <source src="./img/main3/Machine Laser.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="main3_video2">
+                <video autoplay loop>
+                    <source src="./img/main3/Line.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
         <!-- main4 -->

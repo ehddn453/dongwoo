@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNGHO Electronics</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script defer src="js/index.js"></script>
+    <script defer src="js/common.js"></script>
+</head>
+<body>
+    <header>
+        <!-- 버거메뉴 클릭시 header에 class active 들어가야됨 -->
+        <article class="head">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./img/logo_white.png" alt="logo1" class="logo1">
+                    <img src="./img/logo.png" alt="logo2" class="logo2">
+                </a>
+            </h1>
+            <div class="right_menu">
+                <nav class="lang">
+                    <a href="./index.html">Ko</a>
+                    <a href="./index_ch.html">Cn</a>
+                    <a>Partner Center</a>
+                </nav>
+                <!-- 버거메뉴 -->
+                <nav class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+            </div>
+        </article>
+        <!-- 나타나야되는 메뉴 -->
+        <div class="burger_menu">
+            <article class="burger_sub">
+                <a href="sub_en.html">
+                    <h2>About Us</h2>
+                    <ul>
+                        <li>Corporate Message</li>
+                        <li>Sales office</li>
+                        <li>History</li>
+                        <li>Ethics</li>
+                    </ul>
+                </a>
+                <div class="menu_img">
+                    <img src="./img/main3/ms2_pt.png" alt="bg">
+                </div>
+            </article>
+        </div>
+    </header>
+
+    <main>
+        <div class="main1">
+            <!-- 배경이미지 -->
+            <section class="background">
+                <div class="bg1 active">
+                  <img src="./img/background/main_img1.jpg" alt="bg1">
+                </div>
+                <div class="bg2">
+                  <img src="./img/background/main_img2.png" alt="bg2">
+                </div>
+            </section>
+            <ul class="back_button">
+                <li class="btn2 "><em>02</em></li>
+                <li class="btn1 active"><em>01</em></li>
+            </ul>
+            <div class="main1_text">
+                <div class="h2"><h2>Our parts make</h2></div>
+                <div class="h2"><h2>the world convenient</h2></div>
+            </div>
+            <!-- 빨간색 팝업 창 -->
+            <div class="main1_popup">
+                <div class="popup_box">
+                    <span class="search_box"></span>
+                    <form class="popup1">
+                        <strong>Search by Part No.</strong>
+                        <div class="input_box">
+                            <input
+                                class="input_text"
+                                type="text"
+                                placeholder="Please enter a search term."
+                            />
+                            <input type="submit" class="input_submit" value="">
+                        </div>
+                    </form>
+                    <form class="popup1">
+                        <strong>Search by Characteristics</strong>
+                        <div class="input_box">
+                            <input
+                                class="input_text"
+                                type="text"
+                                placeholder="Please enter a search term."
+                            />
+                            <input type="submit" class="input_submit" value="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- main2 -->
+        <div class="main2">
+            <article class="prd">
+                <h2>Products</h2>
+                <!-- class move 가 들어가면 나타나게 -->
+                <div class="prd_box">
+                    <!-- active 들어가면 이미지 보여지게 -->
+                    <span class="active"><img src="./img/product/ms1_prd01.jpg" alt="product1"></span>
+                    <span><img src="./img/product/ms1_prd02.jpg" alt="product2"></span>
+                    <span><img src="./img/product/ms1_prd03.jpg" alt="product3"></span>
+                    <span><img src="./img/product/ms1_prd04.jpg" alt="product4"></span>
+                </div>
+                <div class="prd_popup">
+                    <ul class="prd_popup_all">
+                        <!-- li에 active 들어가면 p태그 보여지게 -->
+                        <li class="prd_popup_info active">
+                            <h3>Film Capacitors</h3>
+                            <p>We manufacture and market a wide variety of film capacitor for EV, 5G base station, Green Energy and so on.</p>
+                        </li>
+                        <li class="prd_popup_info">
+                            <h3>EMS / PCBA (OEM)</h3>
+                            <p>Display Board, Main Control Board, Power Board, Filter Board, Inverter Board, Converter Board and all other PCBAs can be handled.</p>
+                        </li>
+                        <li class="prd_popup_info">
+                            <h3>Power Supply (ODM)</h3>
+                            <p>Display Board, Main Control Board, Power Board, Filter Board, Inverter Board, Converter Board and all other PCBAs can be handled.</p>
+                        </li>
+                        <li class="prd_popup_info">
+                            <h3>LED Lighting (SUNTEK)</h3>
+                            <p>Based on the development and manufacturing technology of converters, we manufacture and sell lights that illuminate comfortable and stable LEDs in various environments and spaces such as apartments, knowledge industry centers, buildings, and factories.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prd_bottom">
+                    <a>Application Guide</a>
+                    <a>Products Catalog</a>
+                </div>
+            </article>
+        </div>
+        <!-- main3 -->
+        <div class="main3">
+            <h2>ABOUT US</h2>
+            <div class="main3_flex">
+                <div class="main3_left">
+                    <span>
+                        <img src="../img/main3/ms2_pt.png">
+                    </span>
+                    <div class="main3_text">
+                        <p>
+                            Established in May 1973 and listed on the KOSDAQ market in 2001, Sungho Electronics primarily focuses on manufacturing and sales of film capacitors, which serve as vital components of passive circuit configuration for power supply units (PSU), and electric electronic finished products. As seen its selection as the Ministry of Knowledge Economy's World Class 300, SME with Managerial Innovation (MAIN-BIZ), and SME with Technical Innovation (INNO-BIZ), the company strives to facilitate continued growth.
+                        </p>
+                        <a>
+                            <span class="arr">
+                                <img src="./img/icon/right_arr.png" alt="arr">
+                            </span>
+                            <em class="circle"></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="main3_right">
+                    <img src="./img/main3/ms2_img.png" alt="map">
+                </div>
+            </div>
+            <!-- active들어가면 비디오 나타남 -->
+            <div class="main3_video1">
+                <video autoplay loop>
+                    <source src="./img/main3/Machine Laser.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="main3_video2">
+                <video autoplay loop>
+                    <source src="./img/main3/Line.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- main4 -->
+        <div class="main4">
+            <article class="sup">
+                <h2>Support</h2>
+                <ul class="sup_flex">
+                    <li>
+                        <span><img src="./img/main4/ms3_img01.jpg" alt="supImg1"></span>
+                        <p>Product Catalog</p>
+                    </li>
+                    <li>
+                        <span><img src="./img/main4/ms3_img02.jpg" alt="supImg2"></span>
+                        <p>Certificates</p>
+                    </li>
+                    <li>
+                        <span><img src="./img/main4/ms3_img03.jpg" alt="supImg3"></span>
+                        <p>Partner Center</p>
+                    </li>
+                </ul>
+            </article>
+        </div>
+        <!-- main5 -->
+        <div class="main5">
+            <article class="con">
+                <h2>Contact Us</h2>
+                <form>
+                    <div class="con1">
+                        <div>
+                            <label>Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                            />
+                        </div>
+                        <div>
+                            <label>Contact</label>
+                            <input
+                                type="text"
+                                name="call"
+                            />
+                        </div>
+                        <div>
+                            <label>E-mail</label>
+                            <input
+                                type="email"
+                                name="email"
+                            />
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <textarea
+                            placeholder="content"
+                            name="text"
+                        ></textarea>
+                    </div>
+                    <div class="con3">
+                        <label>
+                            ※I agree to the privacy policy.
+                            <input
+                                type="checkbox"
+                                name="chk"
+                                class="chk"
+                            />
+                        </label>
+                    </div>
+                    <div class="con4">
+                        <a>Inquiry</a>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="foot1">
+            <div class="foot_form">
+                <form>
+                    <strong>Search by Part No.</strong>
+                    <input
+                        type="text"
+                        placeholder="Please enter a search term."
+                        class="footer_text"
+                    />
+                    <input type="submit" class="footer_submit submit1" value>
+                </form>
+                <form>
+                    <strong>Search by Characteristics</strong>
+                    <input
+                        type="text"
+                        placeholder="Please enter a search term."
+                        class="footer_text"
+                    />
+                    <input type="submit" class="footer_submit submit2" value>
+                </form>
+            </div>
+        </div>
+        <div class="foot2">
+            <article class="foot2_left">
+                <h2>Privacy Policy</h2>
+                <p>Adress : 205-17, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea Tel : +82-2-2104-7500 fax : +82-2-6713-7748</p>
+            </article>
+            <div class="foot2_right">
+                Copyright © Sungho Electronics
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,359 @@
+//header 색 변경위해 사용
+header{
+    width: 100%;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 999;
+    transition: .8s;
+    background-color: #fff;
+    overflow: hidden;
+    //header에 class active가 들어갔을 때(버거메뉴 클릭 시)
+    &.active{
+        background-color: #101010;
+        z-index: 5;
+        opacity: 1;
+        .head{
+            width: 95%;
+            margin: 2% auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: .6s;
+            transform: translateY(-200%);
+            //head에 class show가 들어감(위에서 아래로 나타남)
+            &.show{
+                transform: translateY(0);
+            }
+            .logo{
+                a{
+                    .logo1{display: inline-block;}
+                    .logo2{display: none;}
+                }
+            }
+            .right_menu{
+                color: #fff;
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .lang{
+                    width: 50%;
+                    margin-left: 0%;
+                    a{
+                        display: inline-block;
+                        font-size: 1.3rem;
+                        border: 0.5px solid rgba(255, 255, 255, 0.76);
+                        border-radius: 5px;
+                        padding: 2% 5%;
+                        cursor: pointer;
+                        margin-right: 1%;
+                        transition: .6s ease;
+                        &:hover{
+                            background-color: rgba(145, 145, 145, 0.5);
+                        }
+                    }
+                }
+                .burger{
+                    width: 4%; height: 2.5vh;
+                    position: relative;
+                    cursor: pointer;
+                    span{ 
+                        display: inline-block;
+                        background-color: #fff;
+                        height: 2px;
+                        position: absolute;
+                        right: 0;
+                        transition: .5s;
+                    }
+                    span:nth-of-type(1){top: 0; width: 100%;}
+                    span:nth-of-type(2){top: calc(50% - 1px); width: 70%;}
+                    span:nth-of-type(3){bottom: 0; width: 100%;}
+    
+                    &:hover span:nth-of-type(1){top: 0; width: 70%;}
+                    &:hover span:nth-of-type(2){top: calc(50% - 1px); width: 100%;}
+                    &:hover span:nth-of-type(3){bottom: 0; width: 70%;}
+    
+                    //span태그 클릭 
+                    &.active{
+                        span:nth-of-type(1){
+                            top: calc(50% - 1px); width: 100%;
+                            transform: rotate(45deg);
+                        }
+                        span:nth-of-type(2){display: none;}
+                        span:nth-of-type(3){
+                            top: calc(50% - 1px); width: 100%;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //---------------원래 상태---------------------
+    
+    .head{
+        .logo{
+            a{
+                .logo1{display: none;}
+                .logo2{display: inline-block;}
+            }
+        }
+        .right_menu{
+            color: #000;
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .lang{
+                width: 50%;
+                margin-left: 0%;
+                a{
+                    color: #000;
+                    display: inline-block;
+                    font-size: 1.3rem;
+                    border: 1px solid rgba(145, 145, 145, 0.452);
+                    border-radius: 5px;
+                    padding: 2% 5%;
+                    cursor: pointer;
+                    margin-right: 1%;
+                }
+            }
+            .burger{
+                width: 4%; height: 2.5vh;
+                position: relative;
+                cursor: pointer;
+                span{ 
+                    display: inline-block;
+                    background-color: #000;
+                    height: 2px;
+                    position: absolute;
+                    right: 0;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+    .burger_menu{
+        position: fixed;
+        left: 0; top: 10%;
+        width: 100%; height: 100vh;
+        background-color: #101010;
+        transition: .8s;
+        transform: translateX(100vw);
+        opacity: 0;
+        .burger_sub{
+            padding: 10% 5% 5%;
+            width: 60%;
+            margin: 0 auto;
+            position: relative;
+            a{
+                color: #b2b2b2;
+                text-decoration: none;
+                h2{
+                    font-size: 3rem;
+                    transition: .5s;
+                }
+                h2:hover{color: #fff;}
+                ul{
+                    margin-top: 5%;
+                    li{
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        padding: 2% 0;
+                        transition: .5s;
+                    }
+                    li:hover{
+                        text-decoration: underline;
+                        color: #fff;
+                    }
+                }
+            }
+            .menu_img{
+                position: absolute;
+                right: 0; top: 5%;
+                img{width: 100%;}
+            }
+        }
+    }
+    .burger_menu.active{
+        display: block;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+//sub page
+.subPage{
+    width: 95%;
+    margin: 10% auto 5%;
+    .sub_title{
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        h2{
+            font-size: 2.5rem;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: .6s;
+        }
+        //active 들어갈 때 나타나기
+        &.active{
+            h2{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            ul{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 50%;
+            transform: translateX(50%);
+            opacity: 0;
+            transition: 1.5s;
+            li{
+                font-size: 16px;
+                color: #b1b1b1;
+                position: relative;
+                font-weight: 500;
+                padding-right: 4%;
+                a{
+                    font-size: 16px;
+                    color: #b1b1b1;
+                    text-decoration: none;
+                }
+                &:nth-of-type(3){
+                    color: #af0030;
+                    font-weight: bold;
+                }
+            }
+            li::after{
+                content: '';
+                display: block;
+                width: 14px; height: 14px;
+                background: url('../img/icon/loc_arrow.png') no-repeat;
+                position: absolute;
+                right: 7%; top: 25%;
+            }
+            li:nth-of-type(3)::after{display: none;}
+        }
+    }
+    .sub_main{
+        width: 100%;
+        margin: 5% auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        //--------active 추가 시--------
+        &.active{
+            .subLeft{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .subRight{
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+        //--------기본------
+        .subLeft{
+            width: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: 1s;
+            img{width: 100%;}
+            p{
+                position: absolute;
+                left: 5%; top: 55%;
+                color: #af0030;
+                font-size: 5rem;
+                font-weight: bold;
+                font-style: oblique;
+            }
+        }
+        .subRight{
+            margin-right: 5%;
+            transform: translate(10%,10%);
+            transition: .6s;
+            opacity: 0;
+            div{
+                width: 50%;
+                margin-bottom: 5%;
+                span{
+                    display: inline-block;
+                    width: 8px; height: 8px;
+                    background-color: #af0030;
+                    border-radius: 100%;
+                    margin-right: 2%;
+                }
+            }
+            h3{
+                color: #af0030;
+                font-size: 2rem;
+                text-decoration: underline;
+            }
+            p{
+                white-space: pre-line;
+                color: #2f2f2f;
+                font-size: 1.1rem;
+                line-height: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    .sub_main2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        //-----active 추가 시------
+        &.active{
+            .main2Right{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .main2Left{
+            padding: 10% 10% 10% 5%;
+            line-height: 1rem;
+            //-----active 추가 시------
+            &.active{
+                div{
+                    p{
+                        transform: translateY(0);
+                    }
+                }
+            }
+            //---------기본--------
+            div{
+                overflow: hidden;
+                p{
+                    color: #2f2f2f;
+                    font-weight: 500;
+                    margin: 2% 0;
+                    font-size: 18px;
+                    transform: translateY(200%);
+                    transition: 1.5s;
+                }
+                
+            }
+        }
+        .main2Right{
+            transform: translateX(100%);
+            opacity: 0;
+            transition: 1s;
+            img{width: 100%;}
+        }
+    }
+}
