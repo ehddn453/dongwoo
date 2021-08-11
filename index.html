@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>성호전자</title>
     <link href="css/index.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script defer src="js/index.js"></script>
     <script defer src="js/common.js"></script>
 </head>
 <body>
     <header>
+        <div class="inchead">
         <!-- 버거메뉴 클릭시 header에 class active 들어가야됨 -->
         <article class="head">
             <h1 class="logo">
@@ -23,7 +25,7 @@
                 <nav class="lang">
                     <a href="./index_en.html">En</a>
                     <a href="./index_ch.html">Cn</a>
-                    <a>Partner Center</a>
+                    <a href="./login.html">Partner Center</a>
                 </nav>
                 <!-- 버거메뉴 -->
                 <nav class="burger">
@@ -50,6 +52,7 @@
                 </div>
             </article>
         </div>
+    </div>
     </header>
 
     <main>
@@ -253,35 +256,37 @@
     </main>
 
     <footer>
-        <div class="foot1">
-            <div class="foot_form">
-                <form>
-                    <strong>Search by Part No.</strong>
-                    <input
-                        type="text"
-                        placeholder="Please enter a search term."
-                        class="footer_text"
-                    />
-                    <input type="submit" class="footer_submit submit1" value>
-                </form>
-                <form>
-                    <strong>Search by Characteristics</strong>
-                    <input
-                        type="text"
-                        placeholder="Please enter a search term."
-                        class="footer_text"
-                    />
-                    <input type="submit" class="footer_submit submit2" value>
-                </form>
+        <div class="incfoot">
+            <div class="foot1">
+                <div class="foot_form">
+                    <form>
+                        <strong>Search by Part No.</strong>
+                        <input
+                            type="text"
+                            placeholder="Please enter a search term."
+                            class="footer_text"
+                        />
+                        <input type="submit" class="footer_submit submit1" value>
+                    </form>
+                    <form>
+                        <strong>Search by Characteristics</strong>
+                        <input
+                            type="text"
+                            placeholder="Please enter a search term."
+                            class="footer_text"
+                        />
+                        <input type="submit" class="footer_submit submit2" value>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="foot2">
-            <article class="foot2_left">
-                <h2>개인정보 처리방침</h2>
-                <p>주소: 서울 금천구 가산디지털1로 205-17 Tel: 02-2104-7500 fax: 02-6713-7748</p>
-            </article>
-            <div class="foot2_right">
-                Copyright © Sungho Electronics
+            <div class="foot2">
+                <article class="foot2_left">
+                    <h2>개인정보 처리방침</h2>
+                    <p>주소: 서울 금천구 가산디지털1로 205-17 Tel: 02-2104-7500 fax: 02-6713-7748</p>
+                </article>
+                <div class="foot2_right">
+                    Copyright © Sungho Electronics
+                </div>
             </div>
         </div>
     </footer>

@@ -67,6 +67,7 @@ header.active .head .right_menu .lang {
 }
 
 header.active .head .right_menu .lang a {
+  color: #fff;
   display: inline-block;
   font-size: 1.3rem;
   border: 0.5px solid rgba(255, 255, 255, 0.76);
