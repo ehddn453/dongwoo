@@ -255,9 +255,20 @@ header .burger_menu .burger_sub {
   width: 60%;
   margin: 0 auto;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 header .burger_menu .burger_sub a {
+  display: inline-block;
+  margin-right: 10%;
   color: #b2b2b2;
   text-decoration: none;
 }
@@ -273,7 +284,7 @@ header .burger_menu .burger_sub a h2:hover {
 }
 
 header .burger_menu .burger_sub a ul {
-  margin-top: 5%;
+  margin-top: 20%;
 }
 
 header .burger_menu .burger_sub a ul li {

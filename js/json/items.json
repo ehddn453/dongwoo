@@ -1,0 +1,102 @@
+{
+    "Power":[
+        {
+            "photo":"./img/items/power/power1.png",
+            "name":"RMPL",
+            "voltage":"800~1600 VDC",
+            "capcitance":"33 - 600μF"
+        },
+        {
+            "photo":"./img/items/power/power5.jpg",
+            "name":"RMPA",
+            "voltage":"400~1500 VDC",
+            "capcitance":"1 μF – 330 μF"
+        },
+        {
+            "photo":"./img/items/power/power4.jpg",
+            "name":"BSES",
+            "voltage":"DC-TYPE 850~3000V",
+            "capcitance":"0.047 μF - 5 μF"
+        },
+        {
+            "photo":"./img/items/power/power4.jpg",
+            "name":"BSEL",
+            "voltage":"DC-TYPE 250~850V",
+            "capcitance":"1 μF - 60 μF"
+        },
+        {
+            "photo":"./img/items/power/power3.jpg",
+            "name":"BMPF",
+            "voltage":"250,310,350,400 VAC",
+            "capcitance":"1 μF - 62 μF"
+        },
+        {
+            "photo":"./img/items/power/power1.png",
+            "name":"BMPH",
+            "voltage":"DC-TYPE 850~3000V",
+            "capcitance":"0.033 μF - 4.7 μF"
+        },
+        {
+            "photo":"./img/items/power/power3.jpg",
+            "name":"BMPL",
+            "voltage":"450~1,500 VDC",
+            "capcitance":"1 μF - 210 μF"
+        },
+        {
+            "photo":"./img/items/power/power5.jpg",
+            "name":"AMPP",
+            "voltage":"250,400,630 VDC",
+            "capcitance":"0.01 μF - 10 μF"
+        }
+    ],
+    "EMI":[
+        {
+            "photo":"./img/items/emi/emi1.jpg",
+            "name":"AMPP",
+            "voltage":"250,400,630 VDC",
+            "capcitance":"0.01 μF - 10 μF"
+        },
+        {
+            "photo":"./img/items/emi/emi2.JPG",
+            "name":"MPP-R",
+            "voltage":"400, 630Vdc",
+            "capcitance":"0.01 μF - 2.4 μF"
+        },
+        {
+            "photo":"./img/items/emi/emi3.JPG",
+            "name":"BMPS",
+            "voltage":"1000Vdc, 1250Vdc, 1600Vdc",
+            "capcitance":"0.0027 μF - 0.82 μF"
+        },
+        {
+            "photo":"./img/items/emi/emi4.JPG",
+            "name":"MPE-R",
+            "voltage":"250,400,630 VDC",
+            "capcitance":"0.01 μF - 10 μF"
+        },
+        {
+            "photo":"./img/items/emi/emi3.JPG",
+            "name":"CMPR",
+            "voltage":"250VAC, 300VAC",
+            "capcitance":"0.01 μF - 1.0 μF"
+        },
+        {
+            "photo":"./img/items/emi/emi3.JPG",
+            "name":"CMPS",
+            "voltage":"330Vac",
+            "capcitance":"0.001 μF - 1.0 μF"
+        },
+        {
+            "photo":"./img/items/emi/emi3.JPG",
+            "name":"CMPP",
+            "voltage":"275, 310VAC",
+            "capcitance":"0.0047 μF - 10 μF"
+        },
+        {
+            "photo":"./img/items/emi/emi4.JPG",
+            "name":"CMPX",
+            "voltage":"330 VAC",
+            "capcitance":"0.047 μF - 6.8 μF"
+        }
+    ]
+}
