@@ -22,4 +22,4 @@ window.addEventListener('scroll',function(){
 const elHead = document.querySelector('.head');
 setTimeout(function(){
     elHead.classList.add('show');
-},300);
+},2200);

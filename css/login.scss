@@ -1,0 +1,38 @@
+@import '_common.scss';
+
+.login{
+    margin: 17% auto;
+    text-align: center;
+    .login_logo{
+        width: 20%;
+        margin: 0 auto;
+        a{
+            img{width: 100%;}
+        }
+    }
+    .login_ul{
+        margin: 1.5% 0 1%;
+        li{
+            margin: 0.5% 0;
+            input{
+                display: inline-block;
+                width: 20%; height: 5vh;
+                padding: 0 0.5%;
+                border: 2px solid rgba(143, 143, 143, 0.644);
+            }
+        }
+    }
+    p{
+        font-size: 0.7rem;
+        margin-bottom: 2%;
+        font-weight: 600;
+    }
+    button{
+        display: inline-block;
+        background-color: #1b62b1;
+        color: #fff;
+        padding: 0.8% 9%;
+        border: none;
+        cursor: pointer;
+    }
+}
