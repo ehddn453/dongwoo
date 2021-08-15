@@ -24,15 +24,18 @@ for(let i=0; i<elMain2Li.length; i++){
 };
 //main2 prdbox 전체 스크롤 시 나타나고 없어짐
 const elPrdBox = document.querySelector('.prd_box'),
-      elPrdPopup = document.querySelector('.prd_popup')
+      elPrdPopup = document.querySelector('.prd_popup'),
+      elTopBtn = document.querySelector('.topbtn');
 window.addEventListener('scroll',function(){
     if(window.innerHeight<=window.scrollY + 500){
         elPrdBox.classList.add('move');
+        elTopBtn.classList.add('active');
         setTimeout(function(){
             elPrdPopup.classList.add('move');
         },500);
     }else{
         elPrdBox.classList.remove('move');
+        elTopBtn.classList.remove('active');
         setTimeout(function(){
             elPrdPopup.classList.remove('move');
         },500);
