@@ -16,7 +16,7 @@ elBurger.addEventListener('click',function(){
 const elHead = document.querySelector('.head');
 setTimeout(function(){
     elHead.classList.add('show');
-},300);
+},400);
 
 //items---------------------------------------------------
 function searchFun(){
@@ -90,7 +90,9 @@ function searchFun(){
             elEmiBtn = document.querySelector('.items_menu li:nth-of-type(3)');
 
         elFilmBtn.addEventListener('click',function(){
+            
             elItemsUl.innerHTML = tagList1 + tagList2;
+            localStorage.clear();
         });
         elPowerBtn.addEventListener('click',function(){
             elItemsUl.innerHTML = tagList1;
@@ -206,10 +208,107 @@ function searchFun(){
         }
     }
 }
-searchFun()
+searchFun();
 //----------------enter----------------
 
 /* window.addEventListener('load',function(e){
     e.preventDefault();
 }); */
+//=----------------------------------------------------------------------
+//=----------------------------------------------------------------------
+fetch('./js/json/items.json')
+.then(res => res.json())
+.then(data => callbacks(data));
+
+function callbacks(data){
+    let photo1, name1, vol1, cap1, tagAll1='', 
+        photo2, name2, vol2, cap2, tagAll2='';
+    const elItemsUl = document.querySelector('.items_list');
+    console.log(localStorage.getItem('itemName'))
+    let mainValue = localStorage.getItem('itemName');
+
+    let tag = [], tag2=[];
+    let elTag1 = '',elTag2='';
+    //----------Power---------------------------------
+    for(let i=0; i<data.Power.length; i++){
+        photo1 = data.Power[i].photo;
+        name1 = data.Power[i].name;
+        vol1 = data.Power[i].voltage;
+        cap1 = data.Power[i].capcitance;
+
+        tagAll1 = `<li class="items_item">
+                        <div class="imgBox">
+                            <img src="${photo1}" alt="prd1">
+                        </div>
+                        <p>
+                            <strong>${name1}</strong>
+                        </p>
+                        <ul class="prd_text">
+                            <li>
+                                <strong>Rated Voltage(V)</strong>
+                                <p>${vol1}</p>
+                            </li>
+                            <li>
+                                <strong>Rated Capcitance(μF)</strong>
+                                <p>${cap1}</p>
+                            </li>
+                        </ul>
+                    </li>`;
+        let searchLocal = tagAll1.match(mainValue);
+        // console.log(localValue == searchLocal)
+        if(searchLocal){
+            // console.log(tagAll1)
+            tag.push(tagAll1)
+        };
+    };
+    for(let a=0; a<tag.length; a++){                   
+        elTag1 += tag[a]
+    };
+
+
+    //------------EMI----------------------------------
+    for(let i=0; i<data.EMI.length; i++){
+        photo2 = data.EMI[i].photo;
+        name2 = data.EMI[i].name;
+        vol2 = data.EMI[i].voltage;
+        cap2 = data.EMI[i].capcitance;
+
+        tagAll2 = `<li class="items_item">
+                        <div class="imgBox">
+                            <img src="${photo2}" alt="prd1">
+                        </div>
+                        <p>
+                            <strong>${name2}</strong>
+                        </p>
+                        <ul class="prd_text">
+                            <li>
+                                <strong>Rated Voltage(V)</strong>
+                                <p>${vol2}</p>
+                            </li>
+                            <li>
+                                <strong>Rated Capcitance(μF)</strong>
+                                <p>${cap2}</p>
+                            </li>
+                        </ul>
+                    </li>`;
+        let searchLocal = tagAll2.match(mainValue);
+        // console.log(localValue == searchLocal)
+        if(searchLocal){
+            // console.log(tagAll1)
+            tag2.push(tagAll2)
+        };
+    };
+    for(let a=0; a<tag2.length; a++){                   
+        elTag2 += tag2[a]
+    }
+    elItemsUl.innerHTML = elTag1 + elTag2
+    
+    if(elTag1 == '' && elTag2 == ''){
+        elItemsUl.innerHTML = `<p>
+                                등록된 제품이 없습니다.
+                                </p>`
+    }
+};
+
+
 

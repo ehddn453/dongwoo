@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon/favicon.png">
+
     <title>성호전자</title>
     <link href="css/index.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script defer src="js/inc.js"></script>
     <script defer src="js/index.js"></script>
     <script defer src="js/common.js"></script>
 </head>
 <body>
+    <div id="load">
+        <div>
+            <p>
+                <img src="./img/icon/loading1.gif" alt="loading">
+            </p>
+            <P>
+                <img src="./img/icon/loading123.svg" alt="loading2">
+            </P>
+        </div>
+    </div>
+    <!-- loading -->
+
+    <section class="indexAll">
     <header>
         <div class="inchead">
             <!-- 버거메뉴 클릭시 header에 class active 들어가야됨 -->
@@ -66,6 +80,10 @@
 
     <main>
         <div class="main1">
+            <!-- top 버튼 -->
+            <a href="#" class="topbtn">
+                <img src="./img/icon/airplane2.png" alt="top">
+            </a>
             <!-- 배경이미지 -->
             <section class="background">
                 <div class="bg1 active">
@@ -89,7 +107,7 @@
             <div class="main1_popup">
                 <div class="popup_box">
                     <span class="search_box"></span>
-                    <form class="popup1">
+                    <form class="popup1" onsubmit="return false">
                         <strong>Search by Part No.</strong>
                         <div class="input_box">
                             <input
@@ -97,10 +115,10 @@
                                 type="text"
                                 placeholder="Please enter a search term."
                             />
-                            <input type="submit" class="input_submit" value="">
+                            <input type="button" class="input_submit" value="" onclick="location.href='./items.html'">
                         </div>
                     </form>
-                    <form class="popup1">
+                    <form class="popup1" onsubmit="return false">
                         <strong>Search by Characteristics</strong>
                         <div class="input_box">
                             <input
@@ -108,7 +126,7 @@
                                 type="text"
                                 placeholder="Please enter a search term."
                             />
-                            <input type="submit" class="input_submit" value="">
+                            <input type="button" class="input_submit" value="" onclick="location.href='./items.html'">
                         </div>
                     </form>
                 </div>
@@ -299,5 +317,6 @@
             </div>
         </div>
     </footer>
+</section>
 </body>
 </html>

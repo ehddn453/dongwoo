@@ -1,5 +1,6 @@
 * {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body, html {
@@ -432,11 +433,76 @@ footer .foot2 .foot2_right {
   color: #b2b2b2;
 }
 
+#load {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+#load p:nth-of-type(1) {
+  width: 28%;
+  margin: 0 auto;
+  position: absolute;
+  left: calc(50% - 14%);
+  top: 20%;
+}
+
+#load p:nth-of-type(1) img {
+  width: 100%;
+}
+
+#load p:nth-of-type(2) {
+  width: 10%;
+  margin: 0 auto;
+  position: absolute;
+  left: calc(50% - 5%);
+  bottom: 15%;
+  opacity: 0.9;
+}
+
+#load p:nth-of-type(2) img {
+  width: 100%;
+}
+
+#load.active {
+  display: none;
+}
+
+.indexAll {
+  display: none;
+}
+
+.indexAll.active {
+  display: block;
+}
+
 .main1 {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+.main1 a {
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 950;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+}
+
+.main1 a img {
+  width: 100%;
+  height: 100%;
+}
+
+.main1 a.active {
+  opacity: 1;
 }
 
 .main1 .background {

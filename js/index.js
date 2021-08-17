@@ -1,3 +1,12 @@
+const elLoad = document.querySelector('#load'),
+      elSection = document.querySelector('.indexAll');
+setTimeout(function(){
+        elLoad.classList.add('active');
+        elSection.classList.add('active');
+},2000);
+
+
+localStorage.clear()
 
 //main2 prd popup
 const elMain2Span = document.querySelectorAll('.prd_box span'),
@@ -15,15 +24,18 @@ for(let i=0; i<elMain2Li.length; i++){
 };
 //main2 prdbox 전체 스크롤 시 나타나고 없어짐
 const elPrdBox = document.querySelector('.prd_box'),
-      elPrdPopup = document.querySelector('.prd_popup')
+      elPrdPopup = document.querySelector('.prd_popup'),
+      elTopBtn = document.querySelector('.topbtn');
 window.addEventListener('scroll',function(){
     if(window.innerHeight<=window.scrollY + 500){
         elPrdBox.classList.add('move');
+        elTopBtn.classList.add('active');
         setTimeout(function(){
             elPrdPopup.classList.add('move');
         },500);
     }else{
         elPrdBox.classList.remove('move');
+        elTopBtn.classList.remove('active');
         setTimeout(function(){
             elPrdPopup.classList.remove('move');
         },500);
@@ -37,14 +49,14 @@ const elMain1Popup = document.querySelector('.main1_popup'),
 //오른쪽 위 빨간색 팝업창
 setTimeout(function(){
     elMain1Popup.classList.add('show');
-},1000);
+},3000);
 //text
 setTimeout(function(){
     for(let i=0; i<elMain1H2.length; i++){
         elMain1H2[i].classList.add('show');
     }
     elMain1P.classList.add('show');
-},400);
+},2400);
 
 //main3
 const elMain3 = document.querySelector('.main3'),
@@ -133,4 +145,21 @@ elMain3VdBg.addEventListener('click',function(){
         elMain3Vd2.classList.remove('active');
     };
 });
+
+//---------------main1 검색창에서 상품 페이지로 검색되기-------
+
+const elIndexInput = document.querySelectorAll('.input_text'),
+      elIndexSubmit = document.querySelectorAll('.input_submit');
+
+    for(let i=0; i<elIndexSubmit.length; i++){
+        elIndexSubmit[i].addEventListener('click',function(){
+            console.log(elIndexInput[i].value)
+            const elIndexInputValue = elIndexInput[i].value
+            localStorage.setItem('itemName',elIndexInputValue);
+        });
+    };
+
+
+
+
 
